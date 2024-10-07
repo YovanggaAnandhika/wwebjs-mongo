@@ -1,29 +1,32 @@
 {
   "name": "@dkanest/mongostore",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A MongoDB plugin for whatsapp-web.js library",
-  "main": "index.js",
+  "main": "dist/MongoStore.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
-    "build" : "tsc --build"
+    "clean" : "rimraf dist",
+    "compile": "tsc --build",
+    "build" : "yarn run clean && yarn run compile"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jtourisNS/wwebjs-mongo.git"
+    "url": "https://github.com/YovanggaAnandhika/wwebjs-mongo"
   },
   "keywords": [
     "wwebjs",
     "mongodb",
     "whatsapp-web.js"
   ],
-  "author": "Joaquin Touris",
+  "author": "Joaquin Touris, Yovangga Anandhika",
   "license": "ISC",
   "dependencies": {
     "mongoose": "^8.7.0"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }

@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import mongoose, {Connection } from "mongoose";
 import {MongooseStore} from "./interfaces/mongooseStore";
 
-class MongoStore {
+export class MongoStore {
     get connection(): Connection | undefined {
         return this._connection;
     }
@@ -94,4 +94,4 @@ class MongoStore {
     }
 }
 
-module.exports = MongoStore;
+export default MongoStore
